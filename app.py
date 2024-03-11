@@ -12,4 +12,11 @@ def index():
     r = requests.get(url.format(city)).json()
     print(r)
     
+    weather = {
+        'city' : city,
+        'temperature' : ,
+        'description' : ,
+        'icon' : ,
+    }
+    
     return render_template('weather.html')
