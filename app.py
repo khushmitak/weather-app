@@ -14,9 +14,9 @@ def index():
     
     weather = {
         'city' : city,
-        'temperature' : ,
-        'description' : ,
-        'icon' : ,
+        'temperature' : r['main']['temp'],
+        'description' : r['weather'][0]['description'],
+        'icon' : r['weather'][0]['icon'],
     }
     
-    return render_template('weather.html')
+    return render_template('weather.html', weather=weather)
